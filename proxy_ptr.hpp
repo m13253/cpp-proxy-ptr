@@ -109,10 +109,12 @@ public:
 
     proxy_ptr &operator=(const element_type &value) {
         *_ptr = value;
+        return *this;
     }
 
     proxy_ptr &operator=(element_type &&value) {
         *_ptr = std::move(value);
+        return *this;
     }
 
     element_type &operator*() const noexcept {
