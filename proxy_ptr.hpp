@@ -118,7 +118,7 @@ public:
     }
 
     element_type &operator*() const noexcept {
-        return _ptr;
+        return *_ptr;
     }
 
     pointer operator->() const noexcept {
